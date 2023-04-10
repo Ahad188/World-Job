@@ -1,0 +1,80 @@
+[
+     {
+       "id": 1,
+       "companyName":"Global",
+       "jobTitle": "Software Engineer",
+       "salary": 90000,
+       "description": "We are looking for a software engineer to join our team...",
+       "companyLogo": "https://example.com/company-logo.png",
+       "jobRequirements": "Minimum of 3 years of experience in software development...",
+       "jobStatus": "Remote",
+       "gemail": "john.doe@example.com",
+       "address": "123 Main St, Anytown, USA",
+       "contactNumber": "+1 (555) 123-4567"
+     },
+     {
+       "id": 2,
+       "companyName":"Expert",
+       "jobTitle": "Product Manager",
+       "salary": 110000,
+       "description": "We are seeking a product manager to lead our...",
+       "companyLogo": "https://example.com/company-logo.png",
+       "jobRequirements": "Experience with Agile development methodologies...",
+       "jobStatus": "Onsite",
+       "gemail": "jane.doe@example.com",
+       "address": "456 Elm St, Anytown, USA",
+       "contactNumber": "+1 (555) 234-5678"
+     },
+     {
+       "id": 3,
+       "companyName":"Oylio",
+       "jobTitle": "Data Analyst",
+       "salary": 75000,
+       "description": "We are looking for a data analyst to join our...",
+       "companyLogo": "https://example.com/company-logo.png",
+       "jobRequirements": "Strong skills in SQL, Python and statistical analysis...",
+       "jobStatus": "Remote",
+       "gemail": "bob.smith@example.com",
+       "address": "789 Oak St, Anytown, USA",
+       "contactNumber": "+1 (555) 345-6789"
+     },
+     {
+       "id": 4,
+       "companyName":"Facebook",
+       "jobTitle": "Marketing Manager",
+       "salary": 95000,
+       "description": "We are looking for a marketing manager to help us...",
+       "companyLogo": "https://example.com/company-logo.png",
+       "jobRequirements": "Experience in marketing strategy, product positioning...",
+       "jobStatus": "Onsite",
+       "gemail": "mary.jones@example.com",
+       "address": "321 Pine St, Anytown, USA",
+       "contactNumber": "+1 (555) 456-7890"
+     },
+     {
+       "id": 5,
+       "companyName":"Chromo",
+       "jobTitle": "Graphic Designer",
+       "salary": 55000,
+       "description": "We are seeking a creative graphic designer to join our team...",
+       "companyLogo": "https://example.com/company-logo.png",
+       "jobRequirements": "Proficiency in Adobe Creative Suite...",
+       "jobStatus": "Remote",
+       "gemail": "david.wilson@example.com",
+       "address": "654 Maple St, Anytown, USA",
+       "contactNumber": "+1 (555) 567-8901"
+     },
+     {
+       "id": 6,
+       "companyName":"Google",
+       "jobTitle": "Customer Service Representative",
+       "salary": 35000,
+       "description": "We are seeking a customer service representative to help us...",
+       "companyLogo": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d2abd662597191.5a9589b09ddf5.jpg",
+       "jobRequirements": "Strong communication skills, experience in customer service...",
+       "jobStatus": "Onsite",
+       "gemail": "susan.miller@example.com",
+       "address": "987 Cedar St, Anytown, USA",
+       "contactNumber": "+1 (555) 678"
+     }
+]    

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
  
 import Catagories from '../Catagories/Catagories';
+import CartHome from '../CartHome/CartHome';
 
 const Home = () => {
+     const jobs = useLoaderData()
+     // console.log(jobs);
      const [catagories, setCategory] = useState([]);
      useEffect(()=>{
           fetch('fake.json')
@@ -34,6 +37,21 @@ const Home = () => {
                          data={data}
                          ></Catagories>)
                      }
+               </div>
+           </section>
+           {/* Features Jobs */}
+           <section className='bg-gray-200 p-10'>
+               <div className='text-center'>
+               <h1 className='text-5xl font-bold mb-4'>Featured Jobs</h1>
+               <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+               </div>
+               <div className='md:grid grid-cols-2 m-auto px-16 mt-8 border border-sky-500'>
+               {
+                    jobs.slice(0,4).map(job=> <CartHome 
+                    key={job.id}
+                    job={job}
+                    ></CartHome>)
+               }
                </div>
            </section>
 
