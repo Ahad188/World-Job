@@ -7,16 +7,18 @@ import Home from './Components/Home/Home';
 import Statistics from './Components/Statistics/Statistics';
 import AppliedJobs from './Components/AppliedJobs/AppliedJobs';
 import Blog from './Components/Blog/Blog';
+import SingleD from './Components/SingleD/SingleD';
 
 const router = createBrowserRouter([
      {
           path:'/',
           element:<App/>,
+          
           children:[
                {
                     path:'/',
                     element:<Home/>,
-                    loader:()=>fetch('jobs.json'),
+                    // loader:()=>fetch('jobs.json'),
                },
                {
                     path:'/statistics',
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
                {
                     path:'/jobs',
                     element:<AppliedJobs></AppliedJobs>
+               },
+               {
+                    path:'/jobs/:jobsId',
+                    element:<SingleD></SingleD>
                },
                {
                     path:'/blog',

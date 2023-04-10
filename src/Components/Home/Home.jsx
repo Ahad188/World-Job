@@ -5,7 +5,13 @@ import Catagories from '../Catagories/Catagories';
 import CartHome from '../CartHome/CartHome';
 
 const Home = () => {
-     const jobs = useLoaderData()
+     // const jobs = useLoaderData()
+     const [ jobs, setJobs] = useState([])
+     useEffect(()=>{
+          fetch('jobs.json')
+          .then(res=>res.json())
+          .then(data=>setJobs(data.slice(0,4)))
+     },[])
      // console.log(jobs);
      const [catagories, setCategory] = useState([]);
      useEffect(()=>{
@@ -45,9 +51,9 @@ const Home = () => {
                <h1 className='text-5xl font-bold mb-4'>Featured Jobs</h1>
                <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
                </div>
-               <div className='md:grid grid-cols-2 m-auto px-16 mt-8 border border-sky-500'>
+               <div className='md:grid grid-cols-2 m-auto px-16 mt-8'>
                {
-                    jobs.slice(0,4).map(job=> <CartHome 
+                    jobs.map(job=> <CartHome 
                     key={job.id}
                     job={job}
                     ></CartHome>)

@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CartHome = ({job}) => {
-     console.log(job.image)
+     
+     const navigate = useNavigate()
      const {jobTitle,salary,jobStatus,image,companyName,address,id} = job;
+     // console.log(id)
      return (
           <div className='border border-gray-400 w-[440px] md:w-[540px] rounded-xl m-auto mb-5 mt-5 p-10'>
                       <img className='w-96' src={image} alt="" />
@@ -16,7 +18,7 @@ const CartHome = ({job}) => {
                     <p>Salary: {salary} k</p>
                 </div>
                     
-                    <button title='Full Details' className='mt-8 text-center bg-purple-500 p-3'>View Details</button>
+                    <button onClick={()=>navigate(`jobs/${id}`)} title='Full Details' className='mt-8 text-center bg-purple-500 p-3'>View Details</button>
                
                </div>
 
