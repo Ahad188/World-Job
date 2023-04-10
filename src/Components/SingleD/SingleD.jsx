@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { addToDb } from '../../Utlities/fakeDb';
 
 const SingleD = () => {
      const{jobsId} = useParams()
      const [jobsx,setJobsx] = useState([])
+     const [loData,setLoData] = useState([])
      useEffect(()=>{
           fetch('/public/jobs.json')
           .then(res=>res.json())
           .then(data=> {
                const job = data?.find(singedJob => singedJob.id == jobsId)
-               console.log(job)
+               // console.log(job)
                setJobsx(job)
-                
           })
      },[])
+     const addtoData =(dt)=>{
+          // console.log(dt);
+          const newData = [...loData,dt]
+          setLoData(newData)
+          addToDb(dt.id)
+     }
       
 // console.log(jobsId)
      // console.log(jobsx)
@@ -39,7 +46,7 @@ const SingleD = () => {
                     <p className='text-2xl p-2'>phone: <span className='text-white'>{jobsx.contactNumber} </span> </p>
                     <p className='text-2xl p-2'>Gmail: <span className='text-white'>{jobsx.gemail} </span> </p>
                     <p className='text-2xl p-2'>address: <span className='text-white'>{jobsx.address} </span> </p>
-                    <button className='btn w-52 border border-red-300 mt-8 p-4 bg-purple-500 text-white hover:bg-purple-700'>Apply Now</button>
+                    <button className='btn w-52 border border-red-300 mt-8 p-4 bg-purple-500 text-white hover:bg-purple-700' onClick={()=>addtoData(jobsx)}>Apply Now</button>
                     <Link to='/' className='btn w-52 border border-red-300 mt-8 p-4 bg-purple-500 text-white hover:bg-purple-700'>Go Back</Link>
                </div>
                     
