@@ -8,6 +8,8 @@ import Statistics from './Components/Statistics/Statistics';
 import AppliedJobs from './Components/AppliedJobs/AppliedJobs';
 import Blog from './Components/Blog/Blog';
 import SingleD from './Components/SingleD/SingleD';
+import Alljobs from './Components/AllJobs/Alljobs';
+import JobDit from './Components/JobsDit/JobDit';
 
 const router = createBrowserRouter([
      {
@@ -36,7 +38,13 @@ const router = createBrowserRouter([
                {
                     path:'/blog',
                     element:<Blog></Blog>
-               }
+               },
+               {
+                    path:'alljobs',
+                    element:<Alljobs></Alljobs>,
+                    loader:()=>fetch('jobs.json')
+               },
+                
           ]
      }
 ])

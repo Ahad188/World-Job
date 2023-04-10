@@ -3,6 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
  
 import Catagories from '../Catagories/Catagories';
 import CartHome from '../CartHome/CartHome';
+import Alljobs from '../AllJobs/Alljobs';
 
 const Home = () => {
      // const jobs = useLoaderData()
@@ -10,7 +11,7 @@ const Home = () => {
      useEffect(()=>{
           fetch('jobs.json')
           .then(res=>res.json())
-          .then(data=>setJobs(data.slice(0,4)))
+          .then(data=>setJobs(data))
      },[])
      // console.log(jobs);
      const [catagories, setCategory] = useState([]);
@@ -53,14 +54,19 @@ const Home = () => {
                </div>
                <div className='md:grid grid-cols-2 m-auto px-16 mt-8'>
                {
-                    jobs.map(job=> <CartHome 
+                    jobs.slice(0,4).map(job=> <CartHome 
                     key={job.id}
                     job={job}
                     ></CartHome>)
                }
                </div>
            </section>
-
+               <div className='text-center'>
+                    
+                         <Link to='/alljobs' className='w-40 border border-red-500 p-4 bg-purple-400'>Show All Jobs</Link>
+                          
+                    
+               </div>
           </div>
            
            
