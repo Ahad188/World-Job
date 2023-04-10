@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaFirefox,FaBitcoin,FaCodepen,FaFantasyFlightGames} from "react-icons/fa";
+ 
 import Catagories from '../Catagories/Catagories';
 
 const Home = () => {
