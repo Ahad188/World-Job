@@ -47,7 +47,7 @@ const SingleD = () => {
                     <p className='text-2xl p-2'>Gmail: <span className='text-white'>{jobsx.gemail} </span> </p>
                     <p className='text-2xl p-2'>address: <span className='text-white'>{jobsx.address} </span> </p>
                     <button className='btn w-52 border border-red-300 mt-8 p-4 bg-purple-500 text-white hover:bg-purple-700' onClick={()=>addtoData(jobsx)}>Apply Now</button>
-                    <Link to='/' className='btn w-52 border border-red-300 mt-8 p-4 bg-purple-500 text-white hover:bg-purple-700'>Go Back</Link>
+                    <Link to='/' className='btn w-52 border border-red-300 mt-8 p-4 bg-purple-500 text-white hover:bg-purple-700 md:ml-4 sm:mt-20'>Go Back</Link>
                </div>
                     
           </div>
