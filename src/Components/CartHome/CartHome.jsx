@@ -1,19 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CartHome = ({job}) => {
-     console.log(job.companyLogo)
-     const {jobTitle,salary,jobStatus,companyLogo,companyName} = job;
+     console.log(job.image)
+     const {jobTitle,salary,jobStatus,image,companyName,address,id} = job;
      return (
-          <div className='border border-red-400 w-96 m-auto mb-5 mt-5'>
-               <div>
-                    <img src={companyLogo} alt="" />
-               </div>
-               <div className="text-center p-5">
-               <h2>{jobTitle}</h2>
-               <h3>{companyName}</h3>
-               <p><span>{jobStatus}</span></p>
-               <p><span>{salary}</span></p>
- 
+          <div className='border border-gray-400 w-[440px] md:w-[540px] rounded-xl m-auto mb-5 mt-5 p-10'>
+                      <img className='w-96' src={image} alt="" />
+               <div className="p-5">
+               <h2 className='text-2xl font-bold mb-2'>{jobTitle}</h2>
+               <h3 className='text-xl font-medium mb-2'>{companyName}</h3>
+               <button className='p-2 bg-slate-50'>{jobStatus}</button>
+                <div className='md:flex justify-between items-center mt-2'>
+                    <p className='mb-2'>Address:{address}</p>
+                    <p>Salary: {salary} k</p>
+                </div>
+                    
+                    <button title='Full Details' className='mt-8 text-center bg-purple-500 p-3'>View Details</button>
+               
                </div>
 
           </div>
