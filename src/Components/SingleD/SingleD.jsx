@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const SingleD = () => {
      const{jobsId} = useParams()
@@ -16,7 +16,7 @@ const SingleD = () => {
      },[])
       
 // console.log(jobsId)
-     console.log(jobsx)
+     // console.log(jobsx)
      return (
           <div className='md:grid grid-cols-2 mx-40'>
                <div className='border border-gray-500 p-10 mt-10'>
@@ -40,8 +40,9 @@ const SingleD = () => {
                     <p className='text-2xl p-2'>Gmail: <span className='text-white'>{jobsx.gemail} </span> </p>
                     <p className='text-2xl p-2'>address: <span className='text-white'>{jobsx.address} </span> </p>
                     <button className='btn w-52 border border-red-300 mt-8 p-4 bg-purple-500 text-white hover:bg-purple-700'>Apply Now</button>
+                    <Link to='/' className='btn w-52 border border-red-300 mt-8 p-4 bg-purple-500 text-white hover:bg-purple-700'>Go Back</Link>
                </div>
-
+                    
           </div>
      );
 };
