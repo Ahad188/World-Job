@@ -9,13 +9,14 @@ import AppliedJobs from './Components/AppliedJobs/AppliedJobs';
 import Blog from './Components/Blog/Blog';
 import SingleD from './Components/SingleD/SingleD';
 import Alljobs from './Components/AllJobs/Alljobs';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 // import JobDit from './Components/JobsDit/JobDit';
 
 const router = createBrowserRouter([
      {
           path:'/',
           element:<App/>,
-          
+          errorElement:<ErrorPage></ErrorPage>,
           children:[
                {
                     path:'/',
