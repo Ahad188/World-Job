@@ -8,7 +8,7 @@ import Sumary from '../Sumary/Sumary';
      // console.log(Cart)
      const [Products, setProducts] = useState([]);
      useEffect(()=>{
-          fetch('jobs.json')
+          fetch('/jobs.json')
           .then(res => res.json())
           .then(data => setProducts(data))
      },[]);
@@ -34,7 +34,7 @@ import Sumary from '../Sumary/Sumary';
      }
      const removeHandeler =(id)=>{
           // console.log(id)
-          const remainingCard = Cart.filter(p=>p.id != id);
+          const remainingCard = Cart.filter(job=>job.id != id);
           setCart(remainingCard);
           removeFromDb(id)
       }
@@ -45,9 +45,9 @@ import Sumary from '../Sumary/Sumary';
                 <button className=' bg-purple-500 border border-red-500 p-3' onClick={delletHandeler}>Denali to all Apply</button>
                 </div>
                {
-                    Cart.map(p=><Sumary
-                    key={p.id}
-                    p={p}
+                    Cart.map(job=><Sumary
+                    key={job.id}
+                    job={job}
                     delletHandeler={delletHandeler}
                     removeHandeler={removeHandeler}
                     ></Sumary>)

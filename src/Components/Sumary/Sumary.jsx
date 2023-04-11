@@ -1,8 +1,8 @@
 import React from 'react';
  
 
-const Sumary = ({p,removeHandeler}) => {
-     const {salary,companyName,jobTitle,address,jobStatus,image,id} = p
+const Sumary = ({job,removeHandeler}) => {
+     const {salary,companyName,jobTitle,address,jobStatus,image,id} = job
      
      return (
            <section className='m-auto w-7/12 mt-10 bg-slate-200'>

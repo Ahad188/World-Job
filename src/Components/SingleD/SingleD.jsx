@@ -7,7 +7,7 @@ const SingleD = () => {
      const [jobsx,setJobsx] = useState([])
      const [loData,setLoData] = useState([])
      useEffect(()=>{
-          fetch('/public/jobs.json')
+          fetch('/jobs.json')
           .then(res=>res.json())
           .then(data=> {
                const job = data?.find(singedJob => singedJob.id == jobsId)
@@ -15,11 +15,11 @@ const SingleD = () => {
                setJobsx(job)
           })
      },[])
-     const addtoData =(dt)=>{
+     const addtoData =(dit)=>{
           // console.log(dt);
-          const newData = [...loData,dt]
+          const newData = [...loData,dit]
           setLoData(newData)
-          addToDb(dt.id)
+          addToDb(dit.id)
      }
       
 // console.log(jobsId)

@@ -4,8 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './Components/Header/Header'
 import Blog from './Components/Blog/Blog'
-import { Outlet, useLoaderData } from 'react-router-dom'
+import { Outlet} from 'react-router-dom'
 import Footer from './Components/Footer/Footer'
+
 
 function App() {
     

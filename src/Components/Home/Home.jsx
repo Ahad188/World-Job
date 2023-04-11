@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
- 
 import Catagories from '../Catagories/Catagories';
 import CartHome from '../CartHome/CartHome';
-import Alljobs from '../AllJobs/Alljobs';
+
 
 const Home = () => {
      // const jobs = useLoaderData()
      const [ jobs, setJobs] = useState([])
      useEffect(()=>{
-          fetch('jobs.json')
+          fetch('/jobs.json')
           .then(res=>res.json())
           .then(data=>setJobs(data))
      },[])
      // console.log(jobs);
      const [catagories, setCategory] = useState([]);
      useEffect(()=>{
-          fetch('fake.json')
+          fetch('/fake.json')
           .then(res=>res.json())
           .then(data=> setCategory(data))
      },[])
@@ -27,7 +26,9 @@ const Home = () => {
                <div className='p-10 ml-10'>
                     <h1 className='text-6xl font-bold mb-10 leading-sung'>One step <br /> Closer To Your <br /> <span className='text-purple-600 font-bold'>Dream Job</span></h1>
                     <p className='text-base'>Explore thousands of job opportunities with all the information you need. <br /> Its your future. Come find it. Manage all your job <br /> application from start to finish.</p>
+                    <Link to='/alljobs'>
                     <button className='mt-10 border p-2 bg-purple-600 text-white hover:bg-purple-400'>Get Started</button>
+                    </Link>
                </div>
                <div className='p-10'>
                     <img src="baner.jpg" alt="" />
@@ -62,10 +63,7 @@ const Home = () => {
                </div>
            </section>
                <div className='text-center'>
-                    
                          <Link to='/alljobs' className='w-40 border border-red-500 p-4 bg-purple-400'>Show All Jobs</Link>
-                          
-                    
                </div>
           </div>
            
